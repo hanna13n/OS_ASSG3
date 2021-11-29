@@ -1,4 +1,4 @@
-# OCS3003D: Operating Systems
+# CS3003D: Operating Systems
 
 ## Assignment – 3
 
