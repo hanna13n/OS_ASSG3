@@ -23,7 +23,7 @@
   &nbsp;  
   ![Q1](/Q1/Q1.jpeg)
 
-### 2. Course Instructor, TA and Students - Using Message Queue
+### 2. Course Instructor, TA and Students – Using Message Queue
 
 - **Procedure**  
   Compile and Run the files CI.c, TA.c and students.c concurrently and enter the marks of each student as input to CI.c
