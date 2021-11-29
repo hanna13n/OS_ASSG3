@@ -66,7 +66,6 @@ int main()
         int pid2 = fork();
         if (pid2 == 0)
         {
-            // char str1[] = "Weak", str2[] = "Strong";
             if (pword->a < pword->s)
             {
                 strcpy(pword->strength, "Strong");
