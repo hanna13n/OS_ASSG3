@@ -69,7 +69,7 @@ int can_grant(int n, int m, int avail[], int need[n][m], int alloc[n][m], int p,
         need[p][i] -= req[i];
     }
     int seq[n];
-    int r = is_safe(n, m, avail, need, alloc, seq);
+    int r = safe_state_seq(n, m, avail, need, alloc, seq);
     for (int i = 0; i < m; i++)
     {
         avail[i] += req[i];
@@ -117,7 +117,7 @@ int main()
         avail[i] = total_avail[i];
         for (int j = 0; j < n; j++)
         {
-            avail[i] -= alloc[i][j];
+            avail[i] -= alloc[j][i];
         }
     }
 
@@ -133,7 +133,8 @@ int main()
 menu:
 
     printf("\n\nEnter your choice:\n");
-    scanf("%c\n", &c);
+
+    scanf(" %c", &c);
 
     switch (c)
     {
