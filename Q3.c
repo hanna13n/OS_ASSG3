@@ -151,7 +151,7 @@ menu:
         break;
 
     case 'b':
-        printf("\nEnter the sequence:\n");
+        printf("Enter the sequence:\n");
         for (int i = 0; i < n; i++)
             scanf("%d", &seq[i]);
         if (is_safe(n, m, avail, need, alloc, seq))
@@ -161,10 +161,10 @@ menu:
         break;
 
     case 'c':
-        printf("\nEnter the Process of request:\n");
+        printf("Enter the Process of request:\n");
         int p;
         scanf("%d", &p);
-        printf("\nEnter the Resource of request:\n");
+        printf("Enter the Resource of request:\n");
         for (int i = 0; i < m; i++)
             scanf("%d", &req[i]);
         if (can_grant(n, m, avail, need, alloc, p, req))
