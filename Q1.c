@@ -4,9 +4,7 @@
 #include <sys/shm.h>
 #include <wait.h>
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
-#include <errno.h>
 
 #define PLEN 10
 
@@ -27,19 +25,19 @@ int main()
     if ((key = ftok(".", 1)) < 0)
     {
         printf("Failed to generate key\n");
-        exit(1);
+        return 1;
     }
 
     if ((shmid = shmget(key, sizeof(password), IPC_CREAT | 0666)) < 0)
     {
         printf("Failed to get shared memory\n");
-        exit(1);
+        return 1;
     }
 
     if ((pword = (password *)shmat(shmid, NULL, 0)) == (void *)-1)
     {
         printf("Failed to attach shared memory\n");
-        exit(1);
+        return 1;
     }
 
     int i;
@@ -49,7 +47,7 @@ int main()
     }
     pword->a = 0;
     pword->s = 0;
-  
+
     int pid1 = fork();
     if (pid1 == 0)
     {

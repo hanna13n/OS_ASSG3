@@ -59,7 +59,7 @@ int main()
         return 1;
     }
 
-    printf("Average marks: %f\n\n", ta.avg);
+    printf("\nAverage marks: %.2f\n\n", ta.avg);
     printf("Grades\n");
     for (i = 0; i < 5; i++)
     {

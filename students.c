@@ -39,7 +39,7 @@ int main()
                 printf("Failed to receive message\n");
                 return 1;
             }
-            printf("Student %d scored %f marks\n", i + 1, stu.marks);
+            printf("Student %d scored %.2f marks\n", i + 1, stu.marks);
             return 0;
         }
     }
@@ -48,7 +48,7 @@ int main()
         printf("Failed to receive message\n");
         return 1;
     }
-    printf("Student %d scored %f marks\n", i + 1, stu.marks);
+    printf("Student %d scored %.2f marks\n", i + 1, stu.marks);
 
     return 0;
 }
